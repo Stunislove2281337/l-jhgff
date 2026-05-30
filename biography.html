@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Біографія</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f9f9f9;
+}
+
+/* ===== GRID-КОНТЕЙНЕР ===== */
+.bio-container{
+    display:grid;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "photo text";
+
+    gap:30px;
+
+    max-width:900px;
+    margin:40px auto;
+    padding:30px;
+
+    align-items:center;
+}
+
+/* ===== ЕЛЕМЕНТИ GRID ===== */
+.bio-photo{
+    grid-area: photo;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.bio-photo img{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.bio-text{
+    grid-area: text;
+
+    background:white;
+    padding:20px;
+    border-radius:8px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.bio-text h2{
+    margin-top:0;
+    color:#0066cc;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+
+    background:#0066cc;
+    color:white;
+
+    text-align:center;
+    padding:15px 0;
+}
+
+/* ===== АДАПТИВНА GRID ===== */
+@media screen and (max-width:768px){
+
+    .bio-container{
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "text"
+            "photo";
+
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bio-container">
+
+    <div class="bio-photo">
+        <img src="photo.png" alt="Фото профілю">
+    </div>
+
+    <div class="bio-text">
+
+        <h2>Біографія</h2>
+
+        <p>
+            Я студент групи СП-33 факультету ФІС Тернопільського національного
+            технічного університету імені Івана Пулюя. Навчаюся за спеціальністю
+            в галузі інформаційних технологій, програмування та веб-розробки.
+
+            Мене цікавить створення сучасних веб-додатків, робота з базами даних,
+            алгоритмами та структурою даних. Прагну розвиватися у сфері front-end
+            та back-end розробки, вивчаю JavaScript, HTML, CSS, а також сучасні
+            фреймворки.
+
+            У вільний час займаюся самоосвітою, переглядаю технічні курси,
+            читаю документацію та практикуюся на навчальних проєктах.
+
+            Маю ціль стати повноцінним full-stack розробником і працювати в
+            IT-компанії, де зможу застосовувати свої знання на практиці та
+            розвиватися професійно.
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Персональний веб-сайт студента СП-33
+</footer>
+
+</body>
+</html>

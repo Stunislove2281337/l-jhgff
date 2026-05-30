@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Хоббі</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f9f9f9;
+}
+
+h1{
+    text-align:center;
+    color:#0066cc;
+    margin-top:30px;
+}
+
+/* ===== GRID-КОНТЕЙНЕР ===== */
+.container{
+    display:grid;
+
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "hobbies sidebar";
+
+    gap:20px;
+
+    max-width:1200px;
+    margin:auto;
+    padding:40px;
+
+    align-items:stretch;
+}
+
+/* ===== СІТКА ХОБІ ===== */
+.hobbies{
+    grid-area:hobbies;
+
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+}
+
+/* ===== КАРТКИ ===== */
+.hobby{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    min-height:200px;
+
+    background:white;
+    padding:20px;
+    border-radius:8px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.hobby h3{
+    color:#0066cc;
+    margin-top:0;
+}
+
+.hobby p{
+    text-align:center;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    grid-area:sidebar;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.ad{
+    width:100%;
+    min-height:200px;
+
+    background:#ffeb99;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media screen and (max-width:768px){
+
+    .container{
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "hobbies"
+            "sidebar";
+    }
+
+    .hobbies{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Мої хобі</h1>
+
+<div class="container">
+
+    <div class="hobbies">
+
+        <div class="hobby">
+            <h3>Програмування</h3>
+            <p>Розробка веб-сайтів та додатків.</p>
+        </div>
+
+        <div class="hobby">
+            <h3>Ігри</h3>
+            <p>Стратегічні та логічні ігри.</p>
+        </div>
+
+        <div class="hobby">
+            <h3>Подорожі</h3>
+            <p>Відвідування нових країн.</p>
+        </div>
+
+    </div>
+
+    <div class="sidebar">
+        <div class="ad">Рекламний блок</div>
+    </div>
+
+</div>
+
+</body>
+</html>

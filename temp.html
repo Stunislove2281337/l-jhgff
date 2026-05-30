@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Головна сторінка</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f9f9f9;
+}
+
+/* ===== ОСНОВНИЙ GRID-КОНТЕЙНЕР ===== */
+.wrapper{
+    width:1200px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-rows:auto auto auto 1fr;
+}
+
+/* ===== ШАПКА ===== */
+header{
+    background:#f2f2f2;
+    padding:20px;
+}
+
+/* HEADER GRID */
+.header-container{
+    display:grid;
+    grid-template-columns:150px 1fr 300px;
+    align-items:center;
+    gap:20px;
+}
+
+.icon-img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+}
+
+/* центр */
+.header-center{
+    text-align:center;
+}
+
+/* ===== МЕНЮ ===== */
+nav{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    background:#0066cc;
+}
+
+nav a{
+    text-align:center;
+    padding:14px;
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    background:#004d99;
+}
+
+/* ===== БАНЕР ===== */
+.banner{
+    background:#00b8cc;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+/* ===== ОСНОВНИЙ GRID ===== */
+.container{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    gap:20px;
+    align-items:stretch;
+    margin:20px 0;
+}
+
+/* ===== КОНТЕНТ (GRID СІТКА БЛОКІВ) ===== */
+.content{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+}
+
+/* ОДНАКОВІ КОЛОНКИ */
+.block{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    background:white;
+    padding:15px;
+    border-radius:5px;
+    border:1px solid #ddd;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    display:grid;
+    grid-template-rows:repeat(3, 1fr);
+    gap:20px;
+}
+
+.ad{
+    background:#ffcc00;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:5px;
+    font-weight:bold;
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media screen and (max-width:768px){
+
+    .wrapper{
+        width:100%;
+    }
+
+    .header-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    nav{
+        grid-template-columns:1fr;
+    }
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        grid-template-rows:auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<header>
+
+  <div class="header-container">
+
+    <img src="photo.png" class="icon-img">
+
+    <div class="header-center">
+      <h1>ТНТУ ім. Івана Пулюя</h1>
+      <h2>Факультет ФІС</h2>
+      <h2>Кафедра комп’ютерних наук</h2>
+    </div>
+
+    <div>
+      <img src="logo1.png" class="icon-img">
+      <img src="logo2.png" class="icon-img">
+      <p>Персональна сторінка<br>Ярмолюка Станіслава,<br>група СП-33</p>
+    </div>
+
+  </div>
+
+</header>
+
+<nav>
+  <a href="#">Головна</a>
+  <a href="biography.html">Біографія</a>
+  <a href="mygroup.html">Група</a>
+  <a href="hobby.html">Хоббі</a>
+  <a href="interesting.html">Цікаве</a>
+</nav>
+
+<div class="banner">
+  Головний інформаційний блок
+</div>
+
+<div class="container">
+
+  <div class="content">
+
+    <div class="block">
+      <h3>Біографія</h3>
+      <p>Коротка інформація</p>
+    </div>
+
+    <div class="block">
+      <h3>Група</h3>
+      <p>СП-33</p>
+    </div>
+
+    <div class="block">
+      <h3>Хоббі</h3>
+      <p>Опис</p>
+    </div>
+
+    <div class="block">
+      <h3>Цікаве</h3>
+      <p>Факти</p>
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+
+    <div class="ad">Реклама 1</div>
+    <div class="ad">Реклама 2</div>
+    <div class="ad">Реклама 3</div>
+
+  </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Цікаве</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f9f9f9;
+}
+
+h1{
+    text-align:center;
+    color:#0066cc;
+    margin-top:30px;
+}
+
+/* ===== GRID КОНТЕЙНЕР ===== */
+.articles{
+    display:grid;
+
+    grid-template-columns:1fr;
+    gap:30px;
+
+    max-width:1000px;
+    margin:auto;
+    padding:40px;
+}
+
+/* ===== ОДНА СТАТТЯ ===== */
+.article{
+    display:grid;
+
+    grid-template-columns:120px 1fr;
+    grid-template-areas: "logo text";
+
+    gap:20px;
+
+    align-items:center;
+
+    background:white;
+    padding:20px;
+
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ===== LOGO ===== */
+.logo{
+    grid-area:logo;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* ===== TEXT ===== */
+.text{
+    grid-area:text;
+}
+
+.text h3{
+    margin-top:0;
+    color:#0066cc;
+}
+
+.text p{
+    line-height:1.6;
+    text-align:justify;
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media screen and (max-width:768px){
+
+    .article{
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "logo"
+            "text";
+
+        text-align:center;
+    }
+
+    .text p{
+        text-align:left;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Цікаві матеріали</h1>
+
+<div class="articles">
+
+    <div class="article">
+
+        <div class="logo">
+            <img src="logo1.png" alt="Логотип кафедри">
+        </div>
+
+        <div class="text">
+            <h3>Сучасні ІТ-технології</h3>
+            <p>
+                Інформаційні технології швидко розвиваються, охоплюючи
+                веб-розробку, штучний інтелект, хмарні сервіси та
+                кібербезпеку. Сьогодні програмісти використовують сучасні
+                фреймворки, що значно пришвидшують розробку програмних
+                продуктів і покращують їх якість.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="article">
+
+        <div class="logo">
+            <img src="logo2.png" alt="Логотип кафедри">
+        </div>
+
+        <div class="text">
+            <h3>Навчання та розвиток</h3>
+            <p>
+                Постійне навчання є ключем до успіху в ІТ-сфері.
+                Важливо практикуватися, брати участь у проєктах,
+                проходити онлайн-курси та розвивати практичні навички.
+                Це дозволяє бути конкурентним на ринку праці.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
